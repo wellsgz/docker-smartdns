@@ -4,10 +4,10 @@ LABEL maintainer="Wells <wellsgz@hotmail.com>"
 
 WORKDIR /root
 
-RUN apk add --no-cache libressl curl \
-    && rm -rf /var/lib/apt/lists/* \
-    && curl -OL https://github.com/pymumu/smartdns/releases/download/Release30/smartdns-aarch64 \
-    && mv /root/smartdns-aarch64 /usr/local/bin/smartdns
+RUN apk add --no-cache libressl curl
+RUN rm -rf /var/lib/apt/lists/*
+RUN curl -OL https://github.com/pymumu/smartdns/releases/download/Release30/smartdns-aarch64
+RUN mv /root/smartdns-aarch64 /usr/local/bin/smartdns
 RUN echo "bind [::]:53" > /etc/smartdns.conf
 
 COPY entrypoint.sh /usr/local/bin
