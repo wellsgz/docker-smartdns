@@ -8,8 +8,8 @@ WORKDIR /root
 
 RUN apk add --no-cache libressl curl \
     && rm -rf /var/lib/apt/lists/* \
-    && curl -OL https://github.com/pymumu/smartdns/releases/download/Release30/smartdns.1.2020.02.25-2212.x86_64-linux-all.tar.gz \
-    && tar zxfv smartdns.1.2020.02.25-2212.x86_64-linux-all.tar.gz \
+    && curl -OL https://github.com/pymumu/smartdns/releases/download/Release31/smartdns.1.2020.05.04-0005.x86_64-linux-all.tar.gz \
+    && tar zxfv smartdns.1.2020.05.04-0005.x86_64-linux-all.tar.gz \
     && cp /root/smartdns/src/smartdns /usr/local/bin \
     && cp /root/smartdns/etc/smartdns/smartdns.conf /etc \
     && rm -rf /root/*
