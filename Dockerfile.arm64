@@ -6,7 +6,7 @@ WORKDIR /root
 
 RUN apk add --no-cache libressl curl
 RUN rm -rf /var/lib/apt/lists/*
-RUN curl -OL https://github.com/pymumu/smartdns/releases/download/Release30/smartdns-aarch64
+RUN curl -OL https://github.com/pymumu/smartdns/releases/download/Release32-RC4/smartdns-aarch64
 RUN mv /root/smartdns-aarch64 /usr/local/bin/smartdns
 RUN echo "bind [::]:53" > /etc/smartdns.conf
 
